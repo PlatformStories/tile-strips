@@ -1,13 +1,14 @@
 # tile-strips
 
-A GBDX task for tiling image strips. This task accepts a directory containing GeoTiff imagery as input and uses gdal_translate to complete the tiling. This will speed up extraction of data from large imagery as in [chip-from-vrt](https://github.com/PlatformStories/chip-from-vrt). It will also expedite [adding overlays](http://www.gdal.org/gdaladdo.html).
+A GBDX task for tiling images using gdal_translate. Tiling speeds up pixel extraction from large image files as in [chip-from-vrt](https://github.com/PlatformStories/chip-from-vrt) and expedites [adding overlays](http://www.gdal.org/gdaladdo.html).
 
 
 ## Run
 
-The task will tiles all images in the input directory. The following steps walk through a sample execution of the task.
+The task tiles all the images found in the input directory. 
+Here are the steps for a sample execution of the task.
 
-1. In an iPython terminal create a GBDX interface and specify the input location:
+1. In an Python terminal create a GBDX interface and specify the input location:
 
     ```python
     from gbdxtools import Interface()
@@ -45,16 +46,16 @@ The task will tiles all images in the input directory. The following steps walk 
 
 ## Input ports
 
-| **Parameter:**  | Description:                                                     |
-|-----------------|------------------------------------------------------------------|
-| iamges | Directory: Contains a GeoTiff images to be tiled. Note that any image with a '.tif' extension will be tiled. |
+| Name | Type | Description | Required |
+|-----------------|--------------|--------------|--------------|
+| images | Directory | Contains images to be tiled. All images with a '.tif' extension will be tiled. | True |
 
 
 ## Output ports
 
-| Name  | Type | Description:                                      |
+| Name  | Type | Description:                                     |
 |-------|---------|---------------------------------------------------|
-| tiled_images | Directory | Tiled versions of the input images. |
+| tiled_images | Directory | Contains tiled input images. |
 
 
 ## Development
