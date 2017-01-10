@@ -1,0 +1,34 @@
+{
+    "name": "tile-strips",
+    "description": "Tile GeoTiff images to make chipping and adding overlays faster",
+    "properties": {
+        "isPublic": true,
+        "timeout": 14400
+    },
+    "inputPortDescriptors": [
+        {
+            "name": "images",
+            "type": "directory",
+            "description": "Contains GeoTiff images, which will internally tiled.",
+            "required": true
+        }
+    ],
+    "outputPortDescriptors": [
+        {
+            "name": "tiled_images",
+            "type": "directory",
+            "description": "The tiled images with the same name as original images"
+        }
+    ],
+    "containerDescriptors": [
+        {
+            "type": "DOCKER",
+            "properties": {
+                "image": "naldeborgh/tile-strips",
+                "domain": "default"
+            },
+            "command": "python /tile-strips.py",
+            "isPublic": true
+        }
+    ]
+}
