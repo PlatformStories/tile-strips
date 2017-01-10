@@ -24,7 +24,7 @@
         {
             "type": "DOCKER",
             "properties": {
-                "image": "naldeborgh/tile-strips",
+                "image": "platformstories/tile-strips",
                 "domain": "default"
             },
             "command": "python /tile-strips.py",
