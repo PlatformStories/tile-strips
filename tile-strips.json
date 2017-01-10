@@ -1,6 +1,6 @@
 {
     "name": "tile-strips",
-    "description": "Tile GeoTiff images to make chipping and adding overlays faster",
+    "description": "A GBDX task for tiling images using gdal_translate. Tiling speeds up pixel extraction from large image files as in chip-from-vrt and expedites adding overlays.",
     "properties": {
         "isPublic": true,
         "timeout": 14400
@@ -9,7 +9,7 @@
         {
             "name": "images",
             "type": "directory",
-            "description": "Contains GeoTiff images, which will internally tiled.",
+            "description": "Contains images to be tiled. All images with a '.tif' extension will be tiled.",
             "required": true
         }
     ],
@@ -17,7 +17,7 @@
         {
             "name": "tiled_images",
             "type": "directory",
-            "description": "The tiled images with the same name as original images"
+            "description": "Contains tiled images."
         }
     ],
     "containerDescriptors": [
