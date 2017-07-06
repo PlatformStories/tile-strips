@@ -11,7 +11,7 @@ Here are the steps for a sample execution of the task.
 1. In an Python terminal create a GBDX interface and specify the input location:
 
     ```python
-    from gbdxtools import Interface()
+    from gbdxtools import Interface
     from os.path import join
     import uuid
 
@@ -34,7 +34,7 @@ Here are the steps for a sample execution of the task.
     output_location = join('platform-stories/trial-runs', random_str)
 
     tiler_wf = gbdx.Workflow([tiler])
-    tiler_wf.savedata(tiler.outputs.tiled_images, join(output_location, 'tiled_images'))
+    tiler_wf.savedata(tiler.outputs.tiled_images, join(output_location, 'tiled-images'))
     ```
 
 4. Execute the workflow:
