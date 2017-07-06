@@ -29,12 +29,10 @@ Here are the steps for a sample execution of the task.
 3. Create a workflow and specify the output location:
 
     ```python
-    # Specify output location with random string
-    random_str = str(uuid.uuid4())
-    output_location = join('platform-stories/trial-runs', random_str)
+    output_location = 'platform-stories/trial-runs/tiled-images'
 
     tiler_wf = gbdx.Workflow([tiler])
-    tiler_wf.savedata(tiler.outputs.tiled_images, join(output_location, 'tiled-images'))
+    tiler_wf.savedata(tiler.outputs.tiled_images, output_location)
     ```
 
 4. Execute the workflow:
