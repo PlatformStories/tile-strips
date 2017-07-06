@@ -26,13 +26,11 @@ Here are the steps for a sample execution of the task.
     tiler.inputs.images = join(input_location, 'images')
     ```
 
-3. Create a workflow and specify the output location:
+3. Create a workflow and specify where the output will be saved:
 
     ```python
-    output_location = 'platform-stories/trial-runs/tiled-images'
-
     tiler_wf = gbdx.Workflow([tiler])
-    tiler_wf.savedata(tiler.outputs.tiled_images, output_location)
+    tiler_wf.savedata(tiler.outputs.tiled_images, 'platform-stories/trial-runs/tiled-images')
     ```
 
 4. Execute the workflow:
