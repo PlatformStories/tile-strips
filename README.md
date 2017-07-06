@@ -16,7 +16,7 @@ Here are the steps for a sample execution of the task.
     import uuid
 
     gbdx = Interface()
-    input_location = 's3://gbd-customer-data/58600248-2927-4523-b44b-5fec3d278c09/platform-stories/tile-strips/'
+    input_location = 's3://gbd-customer-data/32cbab7a-4307-40c8-bb31-e2de32f940c2/platform-stories/tile-strips/'
     ```
 
 2. Create a task instance and set the imagery input:
