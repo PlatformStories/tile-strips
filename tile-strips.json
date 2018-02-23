@@ -1,6 +1,8 @@
 {
     "name": "tile-strips",
     "description": "A GBDX task for tiling images using gdal_translate. Tiling speeds up pixel extraction from large image files as in chip-from-vrt and expedites adding overlays.",
+    "version": "0.1.1",
+    "taskOwnerEmail": "kostas.stamatiou@digitalglobe.com",
     "properties": {
         "isPublic": true,
         "timeout": 14400
